@@ -2,8 +2,8 @@
 
 # Install nix
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
+sleep 5
 . /home/codespace/.nix-profile/etc/profile.d/nix.sh
-
 
 # Install tools
 nix-env -iA \
