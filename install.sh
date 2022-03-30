@@ -1,22 +1,20 @@
 #!/bin/bash
 
-# Install nix
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-sleep 1
-. /home/codespace/.nix-profile/etc/profile.d/nix.sh
+# Add repository for latest neovim
+sudo add-apt-repository ppa:neovim-ppa/stable
 
-# Install tailscale
-curl -fsSL https://tailscale.com/install.sh | sh
+ # Install tools
+sudo apt install -y \
+  fzf \
+  jq \
+  ripgrep \
+  neovim \
+  tmux \
+  trash-cli
 
-# # Install tools
-# nix-env -iA \
-#   nixpkgs.fzf \
-#   nixpkgs.jq \
-#   nixpkgs.go \
-#   nixpkgs.gopls \
-#   nixpkgs.nodejs \
-#   nixpkgs.ripgrep \
-#   nixpkgs.tailscale \
-#   nixpkgs.tmux \
-#   nixpkgs.trash-cli \
-#   nixpkgs.tree-sitter
+# Install neovim plugin manager
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Install gopls (go language server protocol)
+go install golang.org/x/tools/gopls@latest
