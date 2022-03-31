@@ -38,8 +38,14 @@ terraform_version='0.12.25'
 tfenv install ${terraform_version}
 tfenv use ${terraform_version}
 
+# Symlinks
 source=/workspaces/.codespaces/.persistedshare/dotfiles
 ln -s $source/tmux.conf $HOME/.tmux.conf
 ln -s $source/nvim $HOME/.config/nvim
 ln -s $source/gitconfig $HOME/.gitconfig
 ln -s $source/aliases $HOME/.bash_aliases
+
+# Override bash config
+echo 'shopt -s autocd' >> $HOME/.bashrc
+echo 'HISTSIZE=10000' >> $HOME/.bashrc
+echo 'HISTFILESIZE=20000' >> $HOME/.bashrc
