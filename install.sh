@@ -19,4 +19,4 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # Install gopls (go language server protocol)
 go install golang.org/x/tools/gopls@latest
 
-ln -s ./.tmux.conf ~/.tmux.conf
+ln -s /workspaces/.codespaces/.persistedshare/dotfiles/.tmux.conf $HOME/.tmux.conf
