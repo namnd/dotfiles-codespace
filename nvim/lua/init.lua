@@ -1,3 +1,11 @@
+require('basic')
+require('plugins')
+require('setup')
+require('bindings')
+require('lsp')
+require('autocompletion')
+require('snippets')
+
 vim.cmd [[
 colorscheme namnd
 set undodir=~/.vim/undodir undofile
@@ -19,4 +27,3 @@ autocmd FileType yml,yaml setlocal foldmethod=indent
 autocmd BufNewFile,BufRead Podfile,*.podspec set filetype=ruby
 autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
 ]]
-
