@@ -15,6 +15,11 @@ sudo apt install -y \
   tmux \
   trash-cli
 
+# Install aws cli
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip /tmp/awscliv2.zip -d /tmp/
+/tmp/aws/install -i ~/.local/share/aws-cli -b ~/.local/bin
+
 # Install neovim plugin manager
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
