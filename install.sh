@@ -16,8 +16,8 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --no-fish --no-zsh --key-bindings --completion
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/share/fzf
+~/.local/share/fzf/install --no-fish --no-zsh --key-bindings --completion --update-rc
 
 # Install gopls (go language server protocol)
 go install golang.org/x/tools/gopls@latest
