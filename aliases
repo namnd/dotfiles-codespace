@@ -1,0 +1,14 @@
+#!/bin/sh
+
+alias vi='nvim'
+alias vim='nvim'
+
+alias all='ls -al'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+chpwd() { ll }                          # always list upon pwd changed
+mcd () { mkdir -p "$1" && cd "$1"; }    # make new dir and cd into it
+
+alias tf='terraform'

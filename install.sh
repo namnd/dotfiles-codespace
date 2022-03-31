@@ -11,6 +11,7 @@ sudo apt install -y \
   jq \
   ripgrep \
   neovim \
+  postgresql \
   tmux \
   trash-cli
 
@@ -25,7 +26,15 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.local/share/fzf
 # Install gopls (go language server protocol)
 go install golang.org/x/tools/gopls@latest
 
+# Install tfenv and terraform
+git clone https://github.com/tfutils/tfenv.git ~/.local/share/tfenv
+ln -s ~/.local/share/tfenv/bin/* ~/.local/bin
+terraform_version='0.12.25'
+tfenv install ${terraform_version}
+tfenv use ${terraform_version}
+
 source=/workspaces/.codespaces/.persistedshare/dotfiles
 ln -s $source/tmux.conf $HOME/.tmux.conf
 ln -s $source/nvim $HOME/.config/nvim
 ln -s $source/gitconfig $HOME/.gitconfig
+ln -s $source/aliases $HOME/.bash_aliases
