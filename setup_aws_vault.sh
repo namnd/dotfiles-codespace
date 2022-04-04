@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e -o pipefail
 
+if [ $# != 1 ]; then
+  echo "Usage: $0 <aws-username>"
+  exit 1
+fi
+
 dir=/workspaces/.codespaces/.persistedshare/dotfiles
 username=$1
 
