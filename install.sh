@@ -54,6 +54,7 @@ echo 'shopt -s autocd' >> $HOME/.bashrc
 echo 'HISTSIZE=10000' >> $HOME/.bashrc
 echo 'HISTFILESIZE=20000' >> $HOME/.bashrc
 echo 'export AWS_VAULT_BACKEND=file' >> $HOME/.bashrc
+echo 'export PS1="${AWS_VAULT}$PS1"' >> $HOME/.bashrc
 
 # Move aws vault setup file
 mv $source/setup_aws_vault.sh $HOME/
