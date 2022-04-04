@@ -9,9 +9,10 @@ sudo add-apt-repository ppa:neovim-ppa/stable
  # Install tools
 sudo apt install -y \
   jq \
-  ripgrep \
+  kitty \
   neovim \
   postgresql \
+  ripgrep \
   tmux \
   trash-cli
 
