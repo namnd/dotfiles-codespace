@@ -20,6 +20,10 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv
 unzip /tmp/awscliv2.zip -d /tmp/
 /tmp/aws/install -i ~/.local/share/aws-cli -b ~/.local/bin
 
+# Install aws-vault
+curl -L https://github.com/99designs/aws-vault/releases/latest/download/aws-vault-linux-$(dpkg --print-architecture) -o ~/.local/bin/aws-vault
+chmod 755 ~/.local/bin/aws-vault
+
 # Install neovim plugin manager
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
@@ -49,3 +53,6 @@ ln -s $source/aliases $HOME/.bash_aliases
 echo 'shopt -s autocd' >> $HOME/.bashrc
 echo 'HISTSIZE=10000' >> $HOME/.bashrc
 echo 'HISTFILESIZE=20000' >> $HOME/.bashrc
+
+# Move aws vault setup file
+mv $source/setup_aws_vault.sh $HOME/

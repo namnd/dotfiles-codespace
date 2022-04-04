@@ -11,3 +11,4 @@ alias .5='cd ../../../../..'
 mcd () { mkdir -p "$1" && cd "$1"; }    # make new dir and cd into it
 
 alias tf='terraform'
+alias v="aws-vault exec --debug --duration=1h"
