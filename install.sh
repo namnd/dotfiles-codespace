@@ -53,6 +53,7 @@ ln -s $source/aliases $HOME/.bash_aliases
 echo 'shopt -s autocd' >> $HOME/.bashrc
 echo 'HISTSIZE=10000' >> $HOME/.bashrc
 echo 'HISTFILESIZE=20000' >> $HOME/.bashrc
+echo 'export AWS_VAULT_BACKEND=file' >> $HOME/.bashrc
 
 # Move aws vault setup file
 mv $source/setup_aws_vault.sh $HOME/
