@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install tailscale
-curl -fsSL https://tailscale.com/install.sh | sh
-
 # Add repository for latest neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
 
