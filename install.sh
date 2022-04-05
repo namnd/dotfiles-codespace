@@ -8,8 +8,10 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 
  # Install tools
 sudo apt install -y \
+  dnsutils \
   jq \
   kitty \
+  iputils-ping \
   neovim \
   postgresql \
   ripgrep \
